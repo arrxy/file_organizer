@@ -1,6 +1,6 @@
 function help(){
     console.log(`
-    The cli commans:
+    The CLI commands:
     1) node main.js help
     2) node main.js tree <path>
     3) node main.js organize <path>
