@@ -94,7 +94,7 @@ function copyFileToDest(srcPath, fullPathOfFile, folderName) {
   fs.copyFileSync(fullPathOfFile, destFileName);
 }
 
-// let srcPath = "/home/aritro/FJP/DEV/NODE/file explorer/downloads";
+// let srcPath = "/home/aritro/FJP/DEV/NODE/file_explorer/downloads";
 // organize(srcPath);
 
 module.exports = {
