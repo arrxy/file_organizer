@@ -76,6 +76,7 @@ function getFolderName(ext) {
       }
     }
   }
+  return "miscellaneous";
 }
 
 function copyFileToDest(srcPath, fullPathOfFile, folderName) {
@@ -89,11 +90,12 @@ function copyFileToDest(srcPath, fullPathOfFile, folderName) {
   // returns the last portion of the path
   let fileName = path.basename(fullPathOfFile);
   let destFileName = path.join(destFolderPath, fileName);
+  //copies the contents of the file and not the file name
   fs.copyFileSync(fullPathOfFile, destFileName);
 }
 
-let srcPath = "/home/aritro/FJP/DEV/NODE/file explorer/downloads";
-organize(srcPath);
+// let srcPath = "/home/aritro/FJP/DEV/NODE/file explorer/downloads";
+// organize(srcPath);
 
 module.exports = {
     organize: organize,
