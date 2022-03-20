@@ -29,7 +29,7 @@ function organize(srcPath) {
     srcPath = process.cwd();
   }
   let organizedFiles = path.join(srcPath, "organized_files");
-//   console.log(organizedFiles);
+  //   console.log(organizedFiles);
   if (!fs.existsSync(organizedFiles)) {
     //mkdirSync -> makes directory with last path name
     fs.mkdirSync(organizedFiles);
@@ -38,7 +38,7 @@ function organize(srcPath) {
   }
   // Reads the contents of the directory -> reads file name
   let allFiles = fs.readdirSync(srcPath);
-//   console.log(allFiles);
+  //   console.log(allFiles);
 
   //traverse over all files and classify them on basis of their extension
 
@@ -61,8 +61,8 @@ function organize(srcPath) {
       //1.2 get folder name from extension
       let folderName = getFolderName(ext);
       //1.3 copy from src folder and paste in dest folder (folder_name eg. document, media, etc)
-        copyFileToDest(srcPath, fullPathOfFile, folderName);
-    //   console.log(folderName);
+      copyFileToDest(srcPath, fullPathOfFile, folderName);
+      //   console.log(folderName);
     }
   }
 }
@@ -82,8 +82,8 @@ function copyFileToDest(srcPath, fullPathOfFile, folderName) {
   //1. make folderName path
   let destFolderPath = path.join(srcPath, "organized_files", folderName);
   //2. check if folder exists, if not then make
-  if(!fs.existsSync(destFolderPath)){
-      fs.mkdirSync(destFolderPath)
+  if (!fs.existsSync(destFolderPath)) {
+    fs.mkdirSync(destFolderPath);
   }
   //3. copy file from src -> dest
   // returns the last portion of the path
@@ -94,3 +94,7 @@ function copyFileToDest(srcPath, fullPathOfFile, folderName) {
 
 let srcPath = "/home/aritro/FJP/DEV/NODE/file explorer/downloads";
 organize(srcPath);
+
+module.exports = {
+    organize: organize,
+}
