@@ -20,7 +20,7 @@ let types = {
     "tex",
   ],
   app: ["exe", "dmg", "pkg", "deb"],
-  codes:[".py", ".cpp",".java", ".js"],
+  codes:["py", "cpp","java", "js", "html", "css"],
   images: ["png", "jpg", "jpeg"],
 };
 function organize(srcPath) {
