@@ -22,6 +22,7 @@ let types = {
   app: ["exe", "dmg", "pkg", "deb"],
   codes:["py", "cpp","java", "js", "html", "css"],
   images: ["png", "jpg", "jpeg"],
+  presentation: ["ppt"],
 };
 function organize(srcPath) {
   // check if source present
